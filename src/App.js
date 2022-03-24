@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ListGroup } from 'react-bootstrap';
-import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state= {
       cityData: {},
       error: false,
       errorMessage: ''
@@ -17,11 +17,15 @@ class App extends React.Component {
   getCityData = async (e) => {
     e.preventDefault();
     try {
-      let cityData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
+      let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`
+      console.log(url);
+
+      let cityData = await axios.get(url)
+      
       this.setState({ cityData: cityData.data[0] })
-      console.log(this.state);
-
-
+      let weatherData = await axios.get(`http://localhost:3001/weather?city=${this.state.city}`);
+      this.setState({weatherData: weatherData.data[0]})
+     
     } catch (error) {
       //console.log('error', error);
       //console.log('error.response', error.response);
@@ -75,4 +79,3 @@ class App extends React.Component {
     );
   };
 };
-export default App;
