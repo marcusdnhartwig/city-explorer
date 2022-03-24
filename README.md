@@ -19,6 +19,10 @@
 
 ## Credit and Collaborations
 //> Chris Yamas
+//> Thomas Basham
+//> Abdinasir Yussuf
+//> Jess Parker
+//> Tai 
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 
