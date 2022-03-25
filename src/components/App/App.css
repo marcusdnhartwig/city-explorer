@@ -6,3 +6,7 @@ ListGroup {
   text-align: center;
   margin-left: 50px;
 }
+
+Card {
+  background-color: aqua;
+}
