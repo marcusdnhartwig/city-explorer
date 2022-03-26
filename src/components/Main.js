@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import Movies from '../components/Movies/Movies';
-import Weather from '../components/Weather/Weather';
-import CityDisplay from '../components/CityDisplay';
-import SearchBar from '../components/SearchBar';
-import ErrorModal from '../components/ErrorModal';
-import '../components/App/App.css';
+import Movies from './Movies';
+import Weather from './Weather';
+import CityDisplay from './CityDisplay';
+import SearchBar from './SearchBar';
+import ErrorModal from './ErrorModal';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Card} from 'react-bootstrap';
 
