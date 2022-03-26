@@ -20,7 +20,7 @@ class Movie extends React.Component {
         >
           <Modal.Header className="modalHead" closeButton>Movies with the same name!
           </Modal.Header>
-          <Modal.Body class name="modalBody"onClick={this.props.hideMovieModal}>
+          <Modal.Body className="modalBody"onClick={this.props.hideMovieModal}>
             {movieResults}
           </Modal.Body>
         </Modal>
